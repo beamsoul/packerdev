@@ -2,7 +2,7 @@
     "builders": [{
       "type": "amazon-ebs",
       "region": "us-east-1",
-      "instance_type": "t2.micro", # This is not for creating instance. Just to test your image.
+      "instance_type": "t2.micro", 
       "ssh_username": "ec2-user",
       "source_ami": "ami-0b898040803850657",
       "ami_name": "updated-ami {{timestamp}}"
