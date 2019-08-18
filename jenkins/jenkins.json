@@ -4,6 +4,7 @@
       "region": "us-east-1",
       "instance_type": "m5.large", 
       "ssh_username": "ec2-user",
+      "ssh_keypair_name": "MyWinKey",
       "source_ami": "ami-0b898040803850657",
       "ami_name": "updated-jenkins-ami {{timestamp}}"
     }],
@@ -20,13 +21,13 @@
             ]
         },
         {
-            "type": "breakpoint",
-            "note": "Something"  
-        },
-        {
             "type": "file",
             "source": "test_file",
             "destination": "/tmp/test_file"
+        }
+        {
+            "type": "breakpoint",
+            "note": "Test Jenkins > open port 8080"  
         }
 
     ]
