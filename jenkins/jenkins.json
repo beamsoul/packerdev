@@ -2,7 +2,7 @@
     "builders": [{
       "type": "amazon-ebs",
       "region": "us-east-1",
-      "instance_type": "t2.micro", 
+      "instance_type": "m5.large", 
       "ssh_username": "ec2-user",
       "source_ami": "ami-0b898040803850657",
       "ami_name": "updated-jenkins-ami {{timestamp}}"
@@ -17,6 +17,10 @@
                 "sudo yum install jenkins -y",
                 "sudo systemctl enable jenkins"
             ]
+        },
+        {
+            "type": "debug-breakpoint"   
         }
+
     ]
   }
