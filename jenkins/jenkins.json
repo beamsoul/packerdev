@@ -17,7 +17,7 @@
                 "sudo yum install jenkins -y",
                 "sudo systemctl enable jenkins",
                 "sudo systemctl start jenkins",
-                "sudo echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCiN4OqqIyok2pOIGzPiJ70LtZHch3MGNv4Sblsb0xcIsIvlSB5ZgxV9AJ1jG2Aojn8oH+PrX1WuHX88gfeSYQtNkrK3R3uTmIKBZS4pZU7hmEZcitjn+o5jThEAOpWyzZ1nfOXeU68GmGifaRATs0yS5YYP/sHPZjMV6j4NzlcqbMHhWoEYZWhgfbpm59Oh+RKQK3BmLJwByX3uRxMQkNy3zaMJwoERlhoovDrjMYlNLDPRrknpkS9PlmuAK5ZvSNk1p4fTtpXBkUWc5MKLn0DOoia4eAHjhwqAlsukYXXfvqdLauUxtT1HIL+XH1QMXIpNULCDBSqnTuGRnQEX5lv cagla@CaGLaR' | tee /root/.ssh/authorized_keys"
+                "sudo echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCiN4OqqIyok2pOIGzPiJ70LtZHch3MGNv4Sblsb0xcIsIvlSB5ZgxV9AJ1jG2Aojn8oH+PrX1WuHX88gfeSYQtNkrK3R3uTmIKBZS4pZU7hmEZcitjn+o5jThEAOpWyzZ1nfOXeU68GmGifaRATs0yS5YYP/sHPZjMV6j4NzlcqbMHhWoEYZWhgfbpm59Oh+RKQK3BmLJwByX3uRxMQkNy3zaMJwoERlhoovDrjMYlNLDPRrknpkS9PlmuAK5ZvSNk1p4fTtpXBkUWc5MKLn0DOoia4eAHjhwqAlsukYXXfvqdLauUxtT1HIL+XH1QMXIpNULCDBSqnTuGRnQEX5lv cagla@CaGLaR' | tee ~/.ssh/authorized_keys"
             ]
         },
         {
