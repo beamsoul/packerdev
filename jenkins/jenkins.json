@@ -5,7 +5,7 @@
       "instance_type": "t2.micro", 
       "ssh_username": "ec2-user",
       "source_ami": "ami-0b898040803850657",
-      "ami_name": "updated-ami {{timestamp}}"
+      "ami_name": "updated-jenkins-ami {{timestamp}}"
     }],
     "provisioners": [{
             "type": "shell",
