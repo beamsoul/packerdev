@@ -22,6 +22,11 @@
         {
             "type": "breakpoint",
             "note": "Something"  
+        },
+        {
+            "type": "file",
+            "source": "test_file",
+            "destination": "/tmp/test_file"
         }
 
     ]
