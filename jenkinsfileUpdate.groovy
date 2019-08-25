@@ -59,7 +59,7 @@ pipeline{
         }
         stage("Filter AMI"){
             steps{
-                def AMI
+                def ami
                 if (REGION == "us-east-1") {
                     AMI = "ami-0b898040803850657"
                 } else if (REGION == "us-east-2"){
@@ -69,7 +69,7 @@ pipeline{
         }
         stage("Build Image"){
             steps{
-                sh 'packer build -var "region=${REGION}" -var "AMI=${AMI}" updated/updated.json'
+                sh 'packer build -var "region=${REGION}" -var "ami=${AMI}" updated/updated.json'
                 echo "Hello"
             }
         }
