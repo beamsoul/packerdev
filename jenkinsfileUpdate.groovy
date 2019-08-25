@@ -57,11 +57,6 @@ pipeline{
                 }
             }
         }
-        stage("Pull Repo"){
-            steps{
-                git("https://github.com/chaglare/packerdev.git")
-            }
-        }
         stage("Build Image"){
             steps{
                 //sh "packer build updated/updated.json"
