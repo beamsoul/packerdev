@@ -1,17 +1,25 @@
 {
-    "builders": [{
-      "type": "amazon-ebs",
-      "region": "{{user `region`}}",
-      "instance_type": "t2.micro", 
-      "ssh_username": "ec2-user",
-      "source_ami": "{{user `AMI`}}",
-      "ami_name": "updated-ami {{timestamp}}"
-    }],
-    "provisioners": [{
-            "type": "shell",
-            "inline": [
-                "sudo yum update -y"
-            ]
-        }
-    ]
-  }
+  "builders": [{
+    "type": "amazon-ebs",
+    "region": "{{user `region` }}",
+    "instance_type": "t2.micro",
+    "ssh_username": "ubuntu",
+    "source_ami_filter": {
+      "filters": {
+        "virtualization-type": "hvm",
+        "name": "ubuntu/images/*ubuntu-xenial-16.04-amd64-server-*",
+        "root-device-type": "ebs"
+      },
+      "owners": ["099720109477"],
+      "most_recent": true
+    },
+    "ami_name": "updated-ami {{timestamp}}"
+  }],
+  "provisioners": [{
+          "type": "shell",
+          "inline": [
+              "sudo yum update -y"
+          ]
+      }
+  ]
+}

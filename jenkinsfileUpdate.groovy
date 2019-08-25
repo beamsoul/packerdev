@@ -6,7 +6,7 @@ pipeline{
                 sh '''
                 set +xe
                 echo Hello
-                ech Error
+                ech  Error
                 sudo yum install httpd wget unzip -y
                 ping -c 4 google.com
                 '''
@@ -35,6 +35,7 @@ pipeline{
             steps{
                 ws("tmp/"){
                     writeFile text: "Test", file: "TestFile"
+                    sh "cat TestFile"
                 }
             }
         }
@@ -57,19 +58,9 @@ pipeline{
                 }
             }
         }
-        stage("Filter AMI"){
-            steps{
-                def ami
-                if (REGION == "us-east-1") {
-                    AMI = "ami-0b898040803850657"
-                } else if (REGION == "us-east-2"){
-                    AMI = "ami-0d8f6eb4f641ef691"
-                }
-            }
-        }
         stage("Build Image"){
             steps{
-                sh 'packer build -var "region=${REGION}" -var "ami=${AMI}" updated/updated.json'
+                sh 'packer build -var "region=${REGION}" -var "AMI=${AMI}" updated/updated.json'
                 echo "Hello"
             }
         }
@@ -81,6 +72,5 @@ pipeline{
         failure {
             mail to:  "chaglare@gmail.com", subject: "job", body: "job completed"
         }
-          
     }
 }
