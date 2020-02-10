@@ -70,7 +70,7 @@ pipeline{
             echo "Done"
         }
         failure {
-            mail to:  "chaglare@gmail.com", subject: "job", body: "job completed"
+            mail to:  "whereisnatnow@gmail.com", subject: "job", body: "job completed"
         }
     }
 }
