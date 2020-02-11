@@ -3,8 +3,8 @@
     "type": "amazon-ebs",
     "region": "us-east-1",
     "instance_type": "t2.micro",
-    "ssh_username": "centos",
-    "source_ami": "ami-02eac2c0129f6376b",
+    "ssh_username": "ec2-user", 
+    "source_ami": "ami-062f7200baf2fa504",
     "ami_name": "updated-ami {{timestamp}}"
   }],
   "provisioners": [{
